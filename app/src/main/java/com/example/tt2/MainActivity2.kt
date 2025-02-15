@@ -1,5 +1,6 @@
 package com.example.tt2
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,6 +10,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -39,6 +41,17 @@ class MainActivity2 : ComponentActivity() {
                     text = square.toString(),
                     fontSize = 52.sp
                 )
+                Button(
+                    onClick ={
+                        val intent = Intent(this@MainActivity2, MainActivity::class.java)
+                        startActivity(intent)
+                    }
+                ) {
+                    Text(
+                        text = "<=",
+                        fontSize = 69.sp,
+                    )
+                }
             }
         }
     }
